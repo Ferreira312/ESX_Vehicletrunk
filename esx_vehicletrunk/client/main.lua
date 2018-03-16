@@ -92,7 +92,7 @@ AddEventHandler('esx_vehicletrunk:onQuit', function()
 	trunkIsOpen = false
 	ESX.UI.Menu.CloseAll()
 	TriggerServerEvent('esx_vehicletrunk:release', currentPlate, json.encode(currentContent), currentExists)
-	ESX.ShowNotification('Pewäkontin sisältö ~g~tallennettu~w~.')
+	ESX.ShowNotification('O item esta ~g~armazenado~w~.')
 	TriggerEvent('esx_vehicletrunk:onTrunkClose')
 end)
 
@@ -102,7 +102,7 @@ function AddItem(name, count, limit, label)
 	for i = 1, #currentContent, 1 do
 		if currentContent[i].name == name then
 			if currentContent[i].count + count > limit then
-				ESX.ShowNotification('~w~Konttiin ~r~ei ~w~mahdu näin montaa kappaletta~r~.')
+				ESX.ShowNotification('A bagageira está ~w~cheia~r~.')
 				return
 			else
 				TriggerServerEvent('esx_vehicletrunk:removeItem', name, count)
@@ -133,12 +133,12 @@ function OpenInventoryDialog(item, itemCount, itemLabel, OGitemLimit, take)
 	ESX.UI.Menu.Open(
 		'dialog', GetCurrentResourceName(), 'vehicle_count',
 		{
-			title = "Syötä lukumäärä"
+			title = "Quantidade"
 		},
 		function(data, menu)
 			local count = tonumber(data.value)
 			if count == nil or count < 1 or (take and count > itemCount) or (not take and count > itemLimit) then
-				ESX.ShowNotification("~r~Kehitysvammainen ~w~lukumäärä~r~.")
+				ESX.ShowNotification("~r~Guardado~r~.")
 			elseif take then
 				TakeItem(item, count)
 			else
@@ -156,7 +156,7 @@ end
 
 function AddItemsMenu()
 	if #currentContent >= Config.MaxItems then
-		ESX.ShowNotification('~w~Pewäkontin ~y~tilavuus ~r~ei~w~ riitä~r~!')
+		ESX.ShowNotification('~w~Quantidade invalida~r~!')
 		OpenTrunkMenu()
 		return
 	end
@@ -171,7 +171,7 @@ function AddItemsMenu()
 		ESX.UI.Menu.Open(
 		  'default', GetCurrentResourceName(), 'inventory_menu',
 		  {
-			title    = "Reppu - Aseta peräkonttiin",
+			title    = "Bagageira",
 			align    = "top-right",
 			elements = options,
 		  },
@@ -206,7 +206,7 @@ function TakeWeapon(name)
 		end
 	end
 	if not found then
-		ESX.ShowNotification('~r~Tapahtui erhedytys~w~.')
+		ESX.ShowNotification('~r~Item nao encontrado~w~.')
 	else
 		TriggerServerEvent('esx_vehicletrunk:giveWeapon', name)
 	end
@@ -226,7 +226,7 @@ function TakeItem(name, count)
 		end
 	end
 	if not found then
-		ESX.ShowNotification('~r~Tapahtui erhedytys~w~.')
+		ESX.ShowNotification('~r~Item nao encontrado~w~.')
 	else
 		TriggerServerEvent('esx_vehicletrunk:giveItem', name, count)
 	end
@@ -279,14 +279,14 @@ function AddWeaponsMenu()
 	  local data = data
       menu.close()
 	  if #currentContent >= Config.MaxItems then
-		ESX.ShowNotification('~y~Pewäkontin ~w~tilavuus ~r~ei ~w~riitä.')
+		ESX.ShowNotification('~y~Quantidade invalida~w~.')
 		Wait(500)
 		OpenTrunkMenu()
 	  else
 		ESX.UI.Menu.Open(
 		'dialog', GetCurrentResourceName(), 'failed_at_coding_dialog',
 		{
-			title = "Haluatko varmasti lisätä aseen " .. data.current.label .. "?"
+			title = "Tem certeza que queres guardar uma arma " .. data.current.label .. "?"
 			
 		},function(data2, menu2)
 			menu2.close()
@@ -321,7 +321,7 @@ function InitTrunkMenu()
 			trunkIsOpen = true
 			OpenTrunkMenu()
 		else
-			ESX.ShowNotification('Tapahtui ~r~erhedytys~w~.')
+			ESX.ShowNotification('Erro.')
 		end
 	end, currentPlate)
 end
@@ -338,13 +338,13 @@ function OpenTrunkMenu()
 				
 			})
 		end
-		table.insert(elements, {label = 'Lisää esine', value = 'add_item'})
-		table.insert(elements, {label = 'Lisää ase', value = 'add_weapon'})
+		table.insert(elements, {label = 'Lista de items', value = 'add_item'})
+		table.insert(elements, {label = 'Lista de armas', value = 'add_weapon'})
 		
 		ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'trunk_menu',
 		{
-		    title    = 'PEWÄKONTTI - ' .. currentPlate,
+		    title    = 'Bagageira - ' .. currentPlate,
 			align    = 'top-right',
 			elements = elements
 		},
@@ -355,7 +355,7 @@ function OpenTrunkMenu()
 				ESX.UI.Menu.Open(
 				'dialog', GetCurrentResourceName(), 'failed_at_coding_dialog',
 				{
-					title = "Haluatko varmasti ottaa aseen " .. data.current.label .. "?"
+					title = "Tem a certeza que quer tirar a arma ? " .. data.current.label .. "?"
 					
 				},function(data2, menu2)
 					menu2.close()
@@ -400,8 +400,3 @@ Citizen.CreateThread(function ()
 		end
 	end
 end)
-
-
-
-
-
