@@ -12,18 +12,17 @@ Config.EnableDebugMarker = true --Debug marker (see github readme img)
 
 
 Config.LinersTake = {
-	"No otat sen nyt silti.",
-	"Et osaa tehdä rationaalisia päätöksiä.",
-	"Tiedän, että halusit sen kuitenkin.",
-	"Älä jaksa...",
-	"Siinä. Ei kestä kiittää.",
-	"Ole hyvä. Vastalauseita ei kuunnella."
+	"Bem, tu ainda aceitas".
+        "Tu nao podes tomar decisoes racionais".
+        "Eu sei que tu querias, no entanto".
+        "Nao seja ..."
+        "Nao agradecas".
+        "Por favor, nenhuma objecao foi ouvida".
 }
 Config.LinersAdd = {
-	"No haista vittu sitten.",
-	"Ei ole tuommoisille tarvettakaan.",
-	"Ensin haluat laittaa aseen ja nyt et?",
-	"Hermothan tämmösessä vehtaamisessa menee.",
-	"Ensikerralla voit jättää kontin suosiolla kiinni.",
+	"Tu cheiras mal entao".
+        "Tambem nao ha necessidade disso".
+        "Primeiro, tu queres colocar uma arma e agora o que?".
+        "Tu podes deixar o produto com um preço superior".
 
 }
