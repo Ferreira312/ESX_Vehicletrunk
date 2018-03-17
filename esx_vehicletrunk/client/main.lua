@@ -172,7 +172,7 @@ function AddItemsMenu()
 		  'default', GetCurrentResourceName(), 'inventory_menu',
 		  {
 			title    = "Bagageira",
-			align    = "top-right",
+			align    = "top-left",
 			elements = options,
 		  },
 		  function(data, menu)
@@ -271,8 +271,8 @@ function AddWeaponsMenu()
   ESX.UI.Menu.Open(
     'default', GetCurrentResourceName(), 'add_weapon',
     {
-      title    = "Talleta aseita",
-      align    = 'top-right',
+      title    = "Armas",
+      align    = 'top-left',
       elements = elements,
     },
     function(data, menu)
@@ -286,7 +286,7 @@ function AddWeaponsMenu()
 		ESX.UI.Menu.Open(
 		'dialog', GetCurrentResourceName(), 'failed_at_coding_dialog',
 		{
-			title = "Tem certeza que queres guardar uma arma " .. data.current.label .. "?"
+			title = "Tem certeza que queres guardar uma " .. data.current.label .. "?"
 			
 		},function(data2, menu2)
 			menu2.close()
@@ -345,7 +345,7 @@ function OpenTrunkMenu()
 		'default', GetCurrentResourceName(), 'trunk_menu',
 		{
 		    title    = 'Bagageira - ' .. currentPlate,
-			align    = 'top-right',
+			align    = 'top-left',
 			elements = elements
 		},
 		function(data, menu)
@@ -355,7 +355,7 @@ function OpenTrunkMenu()
 				ESX.UI.Menu.Open(
 				'dialog', GetCurrentResourceName(), 'failed_at_coding_dialog',
 				{
-					title = "Tem a certeza que quer tirar a arma ? " .. data.current.label .. "?"
+					title = "Tem a certeza que quer tirar a " .. data.current.label .. "?"
 					
 				},function(data2, menu2)
 					menu2.close()
