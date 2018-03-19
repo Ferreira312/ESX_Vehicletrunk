@@ -11,4 +11,6 @@ Locales['en'] = {
   ['trunk'] = 'Trunk',
   ['sure'] = 'Are you sure you want to add a',
   ['surer'] = 'Are you sure you want to take a',
+  ['add_item'] = 'Item list',
+  ['add_weap'] = 'Weapon list',
  }
