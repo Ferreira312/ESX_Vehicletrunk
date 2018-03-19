@@ -5,4 +5,10 @@ Locales['br'] = {
   ['w_quant'] = '~w~Quantidade invalida~r~!',
   ['item_nfound'] = '~r~Item nao encontrado~w~!',
   ['error'] = '~r~Erro~w~!',
+---Titulos
+  ['weap'] = '~r~Erro~w~!',
+  ['quantity'] = '~r~Erro~w~!',
+  ['trunk'] = '~r~Erro~w~!',
+  ['sure'] = '~r~Erro~w~!',
+  ['surer'] = '~r~Erro~w~!',
  }
