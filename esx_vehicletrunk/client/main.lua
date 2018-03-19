@@ -171,7 +171,7 @@ function AddItemsMenu()
 		ESX.UI.Menu.Open(
 		  'default', GetCurrentResourceName(), 'inventory_menu',
 		  {
-			title    = "Bagageira",
+			title    = _U('trunk'),
 			align    = "top-left",
 			elements = options,
 		  },
@@ -271,7 +271,7 @@ function AddWeaponsMenu()
   ESX.UI.Menu.Open(
     'default', GetCurrentResourceName(), 'add_weapon',
     {
-      title    = "Armas",
+      title    = _U('weap'),
       align    = 'top-left',
       elements = elements,
     },
