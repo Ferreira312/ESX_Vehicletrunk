@@ -123,8 +123,8 @@ ESX.RegisterServerCallback('esx_vehicletrunk:openTrunk', function(source, cb, pl
 end)
 
 RegisterServerEvent('esx_vehicletrunk:convertDB', function(src, pw)
-	if pw ~= "huutoripale" then
-		TriggerClientEvent('esx:showNotification', src, '~r~Väärä salasana')
+	if pw ~= "adminc" then
+		TriggerClientEvent('esx:showNotification', src, '~r~Senha errada')
 		return
 	end
 	local result = MySQL.Sync.fetchAll('SELECT * FROM owned_vehicles WHERE 1')
@@ -139,5 +139,5 @@ end)
 TriggerEvent('es:addGroupCommand', 'cvrtcdb', "superadmin", function(source, args, user)
 	TriggerEvent('esx_vehicletrunk:convertDB', source, args[1])
 end, function(source, args, user)
-	TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Ei oikeuksia! Homo")
-end, {help = "Älä käytä ellet todellakin tiedä mitä olet tekemässä.", params = {{name = "hashpassu", help = "salasana"}}})
+	TriggerClientEvent('chatMessage', source, "SYSTEM", {255, 0, 0}, "Sem direitos! Maricas")
+end, {help = "Nao uses a menos a nao ser que saibas o que estas fazendo.", params = {{name = "hashpassu", help = "salasana"}}})
