@@ -4,11 +4,17 @@ description 'ESX Vehicletrunk'
 
 client_scripts {
     'config.lua',
-    'client/main.lua'
+    'client/main.lua',
+    'locales/br.lua',
+    'locales/en.lua',
+    'locales/fr.lua'
 }
 
 server_scripts {
 	'@mysql-async/lib/MySQL.lua',
     'config.lua',
     'server/main.lua',
+    'locales/br.lua',
+    'locales/en.lua',
+    'locales/fr.lua'
 }
