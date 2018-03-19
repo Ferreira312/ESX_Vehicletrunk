@@ -355,7 +355,7 @@ function OpenTrunkMenu()
 				ESX.UI.Menu.Open(
 				'dialog', GetCurrentResourceName(), 'failed_at_coding_dialog',
 				{
-					title = "_U('surer') " .. data.current.label .. "?"
+					title = _U('surer') .. data.current.label .. "?"
 					
 				},function(data2, menu2)
 					menu2.close()
