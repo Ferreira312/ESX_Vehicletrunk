@@ -11,4 +11,6 @@ Locales['br'] = {
   ['trunk'] = 'Bagageira',
   ['sure'] = 'Tem certeza que queres guardar uma',
   ['surer'] = 'Tem a certeza que quer tirar a',
+  ['add_item'] = 'Lista de items',
+  ['add_weap'] = 'Lista de armas',
  }
