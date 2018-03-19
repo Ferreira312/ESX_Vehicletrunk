@@ -133,7 +133,7 @@ function OpenInventoryDialog(item, itemCount, itemLabel, OGitemLimit, take)
 	ESX.UI.Menu.Open(
 		'dialog', GetCurrentResourceName(), 'vehicle_count',
 		{
-			title = "Quantidade"
+			title = _U('quantity')
 		},
 		function(data, menu)
 			local count = tonumber(data.value)
@@ -279,14 +279,14 @@ function AddWeaponsMenu()
 	  local data = data
       menu.close()
 	  if #currentContent >= Config.MaxItems then
-		ESX.ShowNotification('~y~Quantidade invalida~w~.')
+		ESX.ShowNotification_U('w_quant')
 		Wait(500)
 		OpenTrunkMenu()
 	  else
 		ESX.UI.Menu.Open(
 		'dialog', GetCurrentResourceName(), 'failed_at_coding_dialog',
 		{
-			title = "Tem certeza que queres guardar uma " .. data.current.label .. "?"
+			title = _U('sure')  .. data.current.label .. "?"
 			
 		},function(data2, menu2)
 			menu2.close()
@@ -344,7 +344,7 @@ function OpenTrunkMenu()
 		ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'trunk_menu',
 		{
-		    title    = 'Bagageira - ' .. currentPlate,
+		    title    = '_U('trunk') ' .. currentPlate,
 			align    = 'top-left',
 			elements = elements
 		},
@@ -355,7 +355,7 @@ function OpenTrunkMenu()
 				ESX.UI.Menu.Open(
 				'dialog', GetCurrentResourceName(), 'failed_at_coding_dialog',
 				{
-					title = "Tem a certeza que quer tirar a " .. data.current.label .. "?"
+					title = "_U('surer') " .. data.current.label .. "?"
 					
 				},function(data2, menu2)
 					menu2.close()
