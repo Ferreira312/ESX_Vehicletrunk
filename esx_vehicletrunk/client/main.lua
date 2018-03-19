@@ -71,7 +71,7 @@ Citizen.CreateThread(function()
 		if (trunkIsOpen and currentPlate ~= nil and not IsDistanceOk()) or (trunkIsOpen and IsPedInAnyVehicle(GetPlayerPed(-1))) or (trunkIsOpen and IsDoorLocked()) then
 			TriggerEvent('esx_vehicletrunk:onQuit')
 		end
-		Citizen.Wait(100)
+		Citizen.Wait(500)
 	end
 end)
 
