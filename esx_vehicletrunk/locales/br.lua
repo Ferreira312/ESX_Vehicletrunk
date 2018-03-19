@@ -6,9 +6,9 @@ Locales['br'] = {
   ['item_nfound'] = '~r~Item nao encontrado~w~!',
   ['error'] = '~r~Erro~w~!',
 ---Titulos
-  ['weap'] = '~r~Erro~w~!',
-  ['quantity'] = '~r~Erro~w~!',
-  ['trunk'] = '~r~Erro~w~!',
-  ['sure'] = '~r~Erro~w~!',
-  ['surer'] = '~r~Erro~w~!',
+  ['weap'] = 'Armas',
+  ['quantity'] = 'Quantidade',
+  ['trunk'] = 'Bagageira',
+  ['sure'] = 'Tem certeza que queres guardar uma',
+  ['surer'] = 'Tem a certeza que quer tirar a',
  }
