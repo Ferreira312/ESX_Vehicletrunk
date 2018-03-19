@@ -279,7 +279,7 @@ function AddWeaponsMenu()
 	  local data = data
       menu.close()
 	  if #currentContent >= Config.MaxItems then
-		ESX.ShowNotification_U('w_quant')
+		ESX.ShowNotification(_U('w_quant'))
 		Wait(500)
 		OpenTrunkMenu()
 	  else
