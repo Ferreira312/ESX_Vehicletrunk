@@ -5,4 +5,10 @@ Locales['en'] = {
   ['w_quant'] = '~w~Invalid quantity~r~!',
   ['item_nfound'] = '~r~Item not found~w~!',
   ['error'] = '~r~Error~w~!',
+  ---Titles
+  ['weap'] = 'Weapons',
+  ['quantity'] = 'Quantity',
+  ['trunk'] = 'Trunk',
+  ['sure'] = 'Are you sure you want to add a',
+  ['surer'] = 'Are you sure you want to take a',
  }
