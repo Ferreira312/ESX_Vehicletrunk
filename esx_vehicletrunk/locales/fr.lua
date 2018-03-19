@@ -11,4 +11,6 @@ Locales['fr'] = {
   ['trunk'] = 'Botte de voiture',
   ['sure'] = 'Etes-vous sur de vouloir enregistrer un',
   ['surer'] = 'Etes-vous sur de vouloir prendre le',
+  ['add_item'] = 'Liste des articles',
+  ['add_weap'] = 'Liste des armes',
  }
