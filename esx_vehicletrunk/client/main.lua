@@ -338,8 +338,8 @@ function OpenTrunkMenu()
 				
 			})
 		end
-		table.insert(elements, {label = 'Lista de items', value = 'add_item'})
-		table.insert(elements, {label = 'Lista de armas', value = 'add_weapon'})
+		table.insert(elements, {label = _U('add_item'), value = 'add_item'})
+		table.insert(elements, {label = _U('add_weap'), value = 'add_weapon'})
 		
 		ESX.UI.Menu.Open(
 		'default', GetCurrentResourceName(), 'trunk_menu',
